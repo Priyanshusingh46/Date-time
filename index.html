@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Dynamic Clock </title>
+    <style>
+        #showclock {
+            font-size: 40px;
+            color:wheat;
+        }
+        #showdates{
+            font-size: 54px;
+            color:wheat;
+        }
+        body{
+            width: 420px;
+            text-align: center;
+            margin-top: 314px;
+            margin-left: 650px;
+            background-color: black;
+        }
+        h1{
+            color:wheat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Clock">
+        <h1>Thanks For Visting &#128522</h1>
+        <p id="showdates"></p>
+        <p id="showclock"></p>
+        <script>
+            var d = new Date();
+            var n = d.toDateString()
+            document.getElementById("showdates").innerHTML=n;
+        </script>
+        <script type="text/javascript">
+            var clock = setInterval(clocktiming, 1000);
+            function clocktiming() {
+                var d = new Date();
+                var time = d.toLocaleTimeString();
+                document.getElementById("showclock").innerHTML = time;
+            }
+        </script>
+    </div>
+</body>
